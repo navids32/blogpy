@@ -1,10 +1,14 @@
 from  django.urls import path
-from . import views
 from django.conf.urls import url
+from . import views
 
 urlpatterns = [
     path('', views.IndexPage.as_view(), name='index'),
     path('contact/', views.ContactPage.as_view(), name='contact'),
+
+    url(r'^article/$', views.SingleAllArticleAPIView.as_view(), name='single_articles'),
     url(r'^article/all/$', views.AllArticleAPIView.as_view(), name='all_articles'),
+    url(r'^article/search/$', views.SearchArticleAPIView.as_view(), name='search_article'),
+    url(r'^article/submit/$', views.SubmitArticleAPIView.as_view(), name='submit_article'),
 
 ]
