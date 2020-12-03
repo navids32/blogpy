@@ -5,7 +5,7 @@
     <!--- basic page needs
     ================================================== -->
     <meta charset="utf-8">
-    <title>Wordsmith</title>
+    <title>Contact - Wordsmith</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -32,7 +32,7 @@
 
 <body id="top">
 
-    <!-- preloader
+<!-- preloader
     ================================================== -->
     <div id="preloader">
         <div id="loader" class="dots-fade">
@@ -74,7 +74,7 @@
             <h2 class="header__nav-heading h6">Navigate to</h2>
 
             <ul class="header__nav">
-                <li class="current"><a href="index.html" title="">Home</a></li>
+                <li><a href="index.html" title="">Home</a></li>
                 <li class="has-children">
                     <a href="#0" title="">Categories</a>
                     <ul class="sub-menu">
@@ -96,7 +96,7 @@
                 </li>
                 <li><a href="style-guide.html" title="">Styles</a></li>
                 <li><a href="page-about.html" title="">About</a></li>
-                <li><a href="{% url 'contact' %}" title="">Contact</a></li>
+                <li class="current"><a href="page-contact.html" title="">Contact</a></li>
             </ul> <!-- end header__nav -->
 
             <a href="#0" title="Close Menu" class="header__overlay-close close-mobile-menu">Close</a>
@@ -106,100 +106,101 @@
     </header> <!-- s-header -->
 
 
-    <!-- featured 
-    ================================================== -->
-    <section class="s-featured">
-        <div class="row">
-            <div class="col-full">
-
-                <div class="featured-slider featured" data-aos="zoom-in">
-                    {% for promote_article in promote_article_data %}
-                    <div class="featured__slide">
-                        <div class="entry">
-
-                            <div class="entry__background" style="background-image:url('{{ promote_article.cover }}');"></div>
-                            
-                            <div class="entry__content">
-                                <span class="entry__category"><a href="#0">{{ promote_article.category }}</a></span>
-
-                                <h1><a href="#0" title="">{{ promote_article.title }}</a></h1>
-
-                                <div class="entry__info">
-                                    <a href="#0" class="entry__profile-pic">
-                                        <img class="avatar" src="{{ promote_article.avatar }}" alt="">
-                                    </a>
-                                    <ul class="entry__meta">
-                                        <li><a href="#0">{{ promote_article.author }}</a></li>
-                                        <li>{{ promote_article.create_at }}</li>
-                                    </ul>
-                                </div>
-                            </div> <!-- end entry__content -->
-                            
-                        </div> <!-- end entry -->
-                    </div> <!-- end featured__slide -->
-                    {% endfor %}
-                    
-                </div> <!-- end featured -->
-
-            </div> <!-- end col-full -->
-        </div>
-    </section> <!-- end s-featured -->
-
-
     <!-- s-content
     ================================================== -->
-    <section class="s-content">
-        
-        <div class="row entries-wrap wide">
-            <div class="entries">
+    <section class="s-content s-content--top-padding s-content--narrow">
 
-                {% for article in article_data %}
-
-                <article class="col-block">
-                    
-                    <div class="item-entry" data-aos="zoom-in">
-                        <div class="item-entry__thumb">
-                            <a href="single-standard.html" class="item-entry__thumb-link">
-                                <img src="{{ article.cover }}" alt="">
-                            </a>
-                        </div>
-        
-                        <div class="item-entry__text">    
-                            <div class="item-entry__cat">
-                                <a href="category.html">{{ article.category.title }}</a>
-                            </div>
-    
-                            <h1 class="item-entry__title"><a href="single-standard.html">{{ article.title }}</a></h1>
-                                
-                            <div class="item-entry__date">
-                                <a href="single-standard.html">{{ article.create_at }}</a>
-                            </div>
-                        </div>
-                    </div> <!-- item-entry -->
-
-                </article> <!-- end article -->
-                {% endfor %}
-
-            </div> <!-- end entries -->
-        </div> <!-- end entries-wrap -->
-
-        <div class="row pagination-wrap">
-            <div class="col-full">
-                <nav class="pgn" data-aos="fade-up">
-                    <ul>
-                        <li><a class="pgn__prev" href="#0">Prev</a></li>
-                        <li><a class="pgn__num" href="#0">1</a></li>
-                        <li><span class="pgn__num current">2</span></li>
-                        <li><a class="pgn__num" href="#0">3</a></li>
-                        <li><a class="pgn__num" href="#0">4</a></li>
-                        <li><a class="pgn__num" href="#0">5</a></li>
-                        <li><span class="pgn__num dots">…</span></li>
-                        <li><a class="pgn__num" href="#0">8</a></li>
-                        <li><a class="pgn__next" href="#0">Next</a></li>
-                    </ul>
-                </nav>
+        <div class="row narrow">
+            <div class="col-full s-content__header">
+                <h1 class="display-1 display-1--with-line-sep">Contact Us.</h1>
+                <p class="lead">
+                Duis ex ad cupidatat tempor Excepteur cillum cupidatat fugiat nostrud cupidatat dolor 
+                sunt sint sit nisi est eu exercitation incididunt adipisicing veniam velit id fugiat enim 
+                mollit amet anim veniam dolor dolor irure velit commodo.</p>
             </div>
         </div>
+
+        <div class="row">
+            <div class="col-full s-content__main">
+                <p>
+                <img src="/static/images/thumbs/contact/contact-1000.jpg"
+                     srcset="/static/images/thumbs/contact/contact-2000.jpg 2000w,
+                             /static/images/thumbs/contact/contact-1000.jpg 1000w,
+                             /static/images/thumbs/contact/contact-500.jpg 500w"
+                     sizes="(max-width: 2000px) 100vw, 2000px" alt="">
+                </p>
+
+                <h2>Say Hello</h2>
+
+                <p>
+                Odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti 
+                dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique 
+                sunt in culpa. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis 
+                
+                <p>
+                Duis ex ad cupidatat tempor Excepteur cillum cupidatat fugiat nostrud cupidatat dolor 
+                sunt sint sit nisi est eu exercitation incididunt adipisicing veniam velit id fugiat enim 
+                mollit amet anim veniam dolor dolor irure velit commodo cillum sit nulla ullamco. Lorem 
+                ipsum Nisi amet fugiat eiusmod et aliqua ad qui ut nisi Ut aute anim mollit fugiat aute.
+                </p>
+
+                <div id="map-wrap">
+                    <div id="map-container"></div>
+                    <div id="map-zoom-in"></div>
+                    <div id="map-zoom-out"></div>
+                </div> 
+
+                <div class="row">
+                    <div class="col-six tab-full">
+                        <h4>Where to Find Us</h4>
+
+                        <p>
+                        1600 Amphitheatre Parkway<br>
+                        Mountain View, CA<br>
+                        94043 US
+                        </p>
+
+                    </div>
+
+                    <div class="col-six tab-full">
+                        <h4>Contact Info</h4>
+
+                        <p>sayhello@wordsmith.com<br>
+                        info@wordsmith.com <br>
+                        Phone: (+1) 123 456
+                        </p>
+
+                    </div>
+                </div>
+
+                <h4>Get In Touch</h4>
+
+                <form name="cForm" id="cForm" class="contact-form" method="post" action="">
+                    <fieldset>
+
+                        <div>
+                            <input name="cName" id="cName" class="full-width" placeholder="Your Name*" value="" type="text">
+                        </div>
+
+                        <div class="form-field">
+                            <input name="cEmail" id="cEmail" class="full-width" placeholder="Your Email*" value="" type="text">
+                        </div>
+
+                        <div class="form-field">
+                            <input name="cWebsite" id="cWebsite" class="full-width" placeholder="Website" value="" type="text">
+                        </div>
+
+                        <div class="message form-field">
+                        <textarea name="cMessage" id="cMessage" class="full-width" placeholder="Your Message*"></textarea>
+                        </div>
+
+                        <button type="submit" class="submit btn btn--primary btn--large full-width">Send Message</button>
+
+                    </fieldset>
+                </form>
+
+            </div> <!-- s-content__main -->
+        </div> <!-- end row -->
 
     </section> <!-- end s-content -->
 
@@ -398,6 +399,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     ================================================== -->
     <script src="/static/js/jquery-3.2.1.min.js"></script>
     <script src="/static/js/plugins.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
     <script src="/static/js/main.js"></script>
 
 </body>
